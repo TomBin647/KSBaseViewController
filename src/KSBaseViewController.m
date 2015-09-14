@@ -348,6 +348,11 @@
     return _hud;
 }
 
+- (void)displayHUDAndAfterDelayHide:(void (^)(void))complete
+{
+    [self displayHUDAndAfterDelayHide:1.5f complete:complete];
+}
+
 - (void)displayHUDAndAfterDelayHide:(NSTimeInterval)interval complete:(void (^)(void))complete
 {
     KS_WS(ws);

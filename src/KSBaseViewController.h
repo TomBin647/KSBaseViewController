@@ -99,6 +99,10 @@
 
 @property (nonatomic, strong) MBProgressHUD *hud;
 
+/**
+ * @brief 显示HUD并在XX秒后自动隐藏,并触发回调函数,默认1.5秒
+ */
+- (void)displayHUDAndAfterDelayHide:(void (^)(void))complete;
 - (void)displayHUDAndAfterDelayHide:(NSTimeInterval)interval complete:(void (^)(void))complete;
 
 @end
