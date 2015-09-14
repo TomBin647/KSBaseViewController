@@ -14,6 +14,8 @@
 		372A7FCB1BA6B3D50005873E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372A7FCA1BA6B3D50005873E /* Images.xcassets */; };
 		372A7FCE1BA6B3D50005873E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A7FCC1BA6B3D50005873E /* LaunchScreen.xib */; };
 		372A7FDA1BA6B3D50005873E /* KSBaseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A7FD91BA6B3D50005873E /* KSBaseViewControllerTests.m */; };
+		372A7FE61BA6B5800005873E /* KSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A7FE51BA6B5800005873E /* KSBaseViewController.m */; };
+		BFEA57C77860C1E55FEB9B25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1993381CB759439C32D9BEB1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1993381CB759439C32D9BEB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		372A7FBA1BA6B3D50005873E /* KSBaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSBaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372A7FBE1BA6B3D50005873E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372A7FBF1BA6B3D50005873E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,10 @@
 		372A7FD31BA6B3D50005873E /* KSBaseViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSBaseViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372A7FD81BA6B3D50005873E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372A7FD91BA6B3D50005873E /* KSBaseViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSBaseViewControllerTests.m; sourceTree = "<group>"; };
+		372A7FE41BA6B5800005873E /* KSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBaseViewController.h; sourceTree = "<group>"; };
+		372A7FE51BA6B5800005873E /* KSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBaseViewController.m; sourceTree = "<group>"; };
+		9D7C92485804B7AD7A331C8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9F335AC4E3D77D221F31D693 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEA57C77860C1E55FEB9B25 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +71,12 @@
 		372A7FB11BA6B3D50005873E = {
 			isa = PBXGroup;
 			children = (
+				372A7FE31BA6B56C0005873E /* src */,
 				372A7FBC1BA6B3D50005873E /* KSBaseViewController */,
 				372A7FD61BA6B3D50005873E /* KSBaseViewControllerTests */,
 				372A7FBB1BA6B3D50005873E /* Products */,
+				3E0F6395423191CFE2621246 /* Pods */,
+				8D68B27B6F3B09EC794475C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +130,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		372A7FE31BA6B56C0005873E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				372A7FE41BA6B5800005873E /* KSBaseViewController.h */,
+				372A7FE51BA6B5800005873E /* KSBaseViewController.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3E0F6395423191CFE2621246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F335AC4E3D77D221F31D693 /* Pods.debug.xcconfig */,
+				9D7C92485804B7AD7A331C8B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D68B27B6F3B09EC794475C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1993381CB759439C32D9BEB1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 372A7FDD1BA6B3D50005873E /* Build configuration list for PBXNativeTarget "KSBaseViewController" */;
 			buildPhases = (
+				423840A832AC419C8AA5D82D /* Check Pods Manifest.lock */,
 				372A7FB61BA6B3D50005873E /* Sources */,
 				372A7FB71BA6B3D50005873E /* Frameworks */,
 				372A7FB81BA6B3D50005873E /* Resources */,
+				2990DF25E084121754EDB13E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,12 +253,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2990DF25E084121754EDB13E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		423840A832AC419C8AA5D82D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		372A7FB61BA6B3D50005873E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				372A7FC61BA6B3D50005873E /* ViewController.m in Sources */,
+				372A7FE61BA6B5800005873E /* KSBaseViewController.m in Sources */,
 				372A7FC31BA6B3D50005873E /* AppDelegate.m in Sources */,
 				372A7FC01BA6B3D50005873E /* main.m in Sources */,
 			);
@@ -347,9 +420,11 @@
 		};
 		372A7FDE1BA6B3D50005873E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F335AC4E3D77D221F31D693 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSBaseViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,9 +432,11 @@
 		};
 		372A7FDF1BA6B3D50005873E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7C92485804B7AD7A331C8B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSBaseViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +495,7 @@
 				372A7FDF1BA6B3D50005873E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		372A7FE01BA6B3D50005873E /* Build configuration list for PBXNativeTarget "KSBaseViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +504,7 @@
 				372A7FE21BA6B3D50005873E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
