@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    NSLog(@"%@", self.window.rootViewController);
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:self.window.rootViewController];
+    nc.navigationBar.translucent = NO;
+    
+    self.window.rootViewController = nc;
+    
     return YES;
 }
 

@@ -9,7 +9,9 @@
 #import "KSBaseViewController.h"
 
 @interface KSBaseViewController ()
-
+{
+    UINavigationBar *_nav;
+}
 @end
 
 @implementation KSBaseViewController
@@ -50,6 +52,9 @@
 
 - (void)dealloc
 {
+    for (NSString *entry in self.registerNotifications) {
+        [KS_NOTIFY removeObserver:self name:entry object:nil];
+    }
     if (_hud)        _hud        = nil;
     if (_tableView)  _tableView  = nil;
     if (_dataSource) _dataSource = nil;
@@ -60,23 +65,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     //设置导航栏
     if (self.navigationController) {
-        UIView *leftView  = [self customNavigationbarLeftButton];
-        UIView *rightView = [self customNavigationbarRightButton];
-        if (leftView) {
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
+        
+        UIButton *left  = [self navigationBarLeftButton];
+        UIButton *right = [self navigationBarRightButton];
+        
+        if (left) {
+            [left addTarget:self action:@selector(navigationBarLeftButtonHandler:)];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:left];
         }
-        if (rightView) {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
+        if (right) {
+            [right addTarget:self action:@selector(navigationBarRightButtonHandler:)];
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:right];
         }
     }
     //组件初始化
     [self initializationComponent];
     //注册通知
-    [[self registerNotifications] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [KS_NOTIFY addObserver:self selector:@selector(receiveNotificationHandler:) name:obj object:nil];
-    }];
+    for (NSString *entry in self.registerNotifications) {
+        [KS_NOTIFY addObserver:self selector:@selector(receiveNotificationHandler:) name:entry object:nil];
+    }
 }
 
 #pragma mark - 组件初始化
@@ -108,37 +120,30 @@
 #pragma mark - 自定义导航
 
 /**
- * @breif 自定义导航栏
- */
-- (UINavigationBar *)customNavigationbar
-{
-    return nil;
-}
-/**
  * @brief 导航栏目左边按钮
  */
-- (UIView *)customNavigationbarLeftButton
+- (UIButton *)navigationBarLeftButton
 {
     return nil;
 }
 /**
  * @brief 导航栏目右边按钮
  */
-- (UIView *)customNavigationbarRightButton
+- (UIButton *)navigationBarRightButton
 {
     return nil;
 }
 /**
  * 导航栏左侧按钮事件
  */
-- (void)leftButtonOnClickEventHandler:(id)sender
+- (void)navigationBarLeftButtonHandler:(id)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /**
  * 导航栏右侧按钮事件
  */
-- (void)rightButtonOnClickEventHandler:(id)sender
+- (void)navigationBarRightButtonHandler:(id)sender
 {
     
 }
@@ -342,7 +347,6 @@
 {
     if (_hud == nil) {
         _hud = [[MBProgressHUD alloc] initWithView:self.view];
-        [_hud setHidden:YES];
         [self addChild:_hud];
     }
     return _hud;
@@ -363,7 +367,7 @@
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(interval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         KS_DISPATCH_MAIN_QUEUE(^{
-            [ws.hud setHidden:YES];
+            [ws.hud hide:YES];
         });
     });
 }

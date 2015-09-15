@@ -31,25 +31,21 @@
 #pragma mark - 自定义导航
 
 /**
- * @breif 自定义导航栏
- */
-- (UINavigationBar *)customNavigationbar;
-/**
  * @brief 导航栏目左边按钮
  */
-- (UIView *)customNavigationbarLeftButton;
+- (UIButton *)navigationBarLeftButton;
 /**
  * @brief 导航栏目右边按钮
  */
-- (UIView *)customNavigationbarRightButton;
+- (UIButton *)navigationBarRightButton;
 /**
  * 导航栏左侧按钮事件
  */
-- (void)leftButtonOnClickEventHandler:(id)sender;
+- (void)navigationBarLeftButtonHandler:(id)sender;
 /**
  * 导航栏右侧按钮事件
  */
-- (void)rightButtonOnClickEventHandler:(id)sender;
+- (void)navigationBarRightButtonHandler:(id)sender;
 
 #pragma mark - 通知
 

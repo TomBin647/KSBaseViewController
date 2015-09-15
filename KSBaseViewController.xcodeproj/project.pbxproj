@@ -15,6 +15,7 @@
 		372A7FCE1BA6B3D50005873E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A7FCC1BA6B3D50005873E /* LaunchScreen.xib */; };
 		372A7FDA1BA6B3D50005873E /* KSBaseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A7FD91BA6B3D50005873E /* KSBaseViewControllerTests.m */; };
 		372A7FE61BA6B5800005873E /* KSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A7FE51BA6B5800005873E /* KSBaseViewController.m */; };
+		37E466501BA7AAD90019AC9F /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E4664F1BA7AAD90019AC9F /* NextViewController.m */; };
 		BFEA57C77860C1E55FEB9B25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1993381CB759439C32D9BEB1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		372A7FD91BA6B3D50005873E /* KSBaseViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSBaseViewControllerTests.m; sourceTree = "<group>"; };
 		372A7FE41BA6B5800005873E /* KSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSBaseViewController.h; sourceTree = "<group>"; };
 		372A7FE51BA6B5800005873E /* KSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSBaseViewController.m; sourceTree = "<group>"; };
+		37E4664E1BA7AAD90019AC9F /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		37E4664F1BA7AAD90019AC9F /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		9D7C92485804B7AD7A331C8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F335AC4E3D77D221F31D693 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +103,8 @@
 				372A7FCA1BA6B3D50005873E /* Images.xcassets */,
 				372A7FCC1BA6B3D50005873E /* LaunchScreen.xib */,
 				372A7FBD1BA6B3D50005873E /* Supporting Files */,
+				37E4664E1BA7AAD90019AC9F /* NextViewController.h */,
+				37E4664F1BA7AAD90019AC9F /* NextViewController.m */,
 			);
 			path = KSBaseViewController;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E466501BA7AAD90019AC9F /* NextViewController.m in Sources */,
 				372A7FC61BA6B3D50005873E /* ViewController.m in Sources */,
 				372A7FE61BA6B5800005873E /* KSBaseViewController.m in Sources */,
 				372A7FC31BA6B3D50005873E /* AppDelegate.m in Sources */,
