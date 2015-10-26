@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KSBaseViewController"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "KSBaseViewController"
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/bing6/KSBaseViewController.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/bing6/KSBaseViewController.git", :tag => "0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -135,7 +135,5 @@ Pod::Spec.new do |s|
   s.dependency "Masonry", "~> 0.6.2"
   s.dependency "MBProgressHUD", "~> 0.9.1"
   s.dependency "KSToolkit", "~> 0.2"
-  s.dependency "KSRefresh", "~> 0.4"
-  s.dependency "KSWebRequest", "~> 0.1"
 
 end
