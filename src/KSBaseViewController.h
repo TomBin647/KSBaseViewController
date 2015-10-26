@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <KSToolkit/KSToolkit.h>
-#import <KSRefresh/UIScrollView+KS.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Masonry/Masonry.h>
 
@@ -16,8 +15,7 @@
 <
     UITableViewDataSource,
     UITableViewDelegate,
-    UIScrollViewDelegate,
-    KSRefreshViewDelegate
+    UIScrollViewDelegate
 >
 
 #pragma mark - 组件初始化
